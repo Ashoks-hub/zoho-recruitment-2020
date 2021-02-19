@@ -1,2 +1,38 @@
 
-https://writer.zoho.in/writer/open/k51j6e30ddc6669ee4fdfb1090eeb628ec7bf
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+int i,len;
+char str[99];
+label ABC:
+printf("Enter the string \n");
+scanf(" %s",str);
+
+len = strlen(str);
+if(len<1)
+{
+printf("enter the valid string \n")
+goto ABC;
+}
+int j,k=0;
+char strstr[len];
+
+
+for ( i=len/2 ;str[i];i++)
+{
+strstr[k++] = str[i];
+}
+
+for(i =0 ;i < len/2;i++)
+strstr[k++] = str[i];
+
+for(i =0 ;strstr[i];i++)
+{
+	for(j=0 ;j<i;j++)
+	printf("%c",strstr[j]);
+printf(\n);
+}
+
+
